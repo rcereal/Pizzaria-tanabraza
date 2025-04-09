@@ -3,14 +3,20 @@ const router = express.Router();
 
 const pedidosController = require("../controllers/pedidosController");
 
-// // Rota para listar pizzas (se quiser manter)
-// router.get("/", pedidosController.listarPizzas);
+// Página do formulário de pedidos (GET)
+router.get("/pedidos", (req, res) => {
+  res.sendFile("pedidos.html", { root: "public" });
+});
 
-// Rota para criar pedido
+// Criar um novo pedido (POST)
+router.post("/enviar-pedido", pedidosController.criarPedido);
+
+// Rota alternativa para criar pedido (opcional, pode remover se não usar)
 router.post("/criar", pedidosController.criarPedido);
 
-// Você pode adicionar outras rotas como:
-// router.get('/:id', pedidosController.verPedido);
-// router.put('/:id', pedidosController.atualizarPedido);
+// Futuras implementações (exemplo):
+// router.get("/pedidos/:id", pedidosController.verPedido);
+// router.put("/pedidos/:id", pedidosController.atualizarPedido);
+// router.delete("/pedidos/:id", pedidosController.deletarPedido);
 
 module.exports = router;

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fazer Pedido - Pizzaria Tanabraza</title>
+    <link rel="stylesheet" href="/Pizzaria/public/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pizzaria Wayne</h1>
+      <nav>
+        <ul>
+          <li><a href="/pizzaria">Início</a></li>
+          <li><a href="/pedidos">Pedidos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Faça seu pedido</h2>
+      <form id="formPedido">
+        <label>Nome do Cliente:</label>
+        <input type="text" name="nome_cliente" required />
+
+        <label>Telefone:</label>
+        <input type="text" name="telefone" required />
+
+        <label>Endereço:</label>
+        <input type="text" name="endereco" required />
+
+        <label>Pizza:</label>
+        <input type="text" name="pizza" required />
+
+        <label>Tamanho:</label>
+        <select name="tamanho" required>
+          <option value="">Selecione</option>
+          <option value="Pequena">Pequena</option>
+          <option value="Média">Média</option>
+          <option value="Grande">Grande</option>
+        </select>
+
+        <label>Adicionais:</label>
+        <input type="text" name="adicionais" placeholder="Ex: Borda recheada" />
+
+        <label>Sabor (ID):</label>
+        <input type="number" name="sabor_id" required />
+
+        <button type="submit">Fazer Pedido</button>
+      </form>
+
+      <div id="resposta"></div>
+    </main>
+    <script>
+      const form = document.getElementById("formPedido");
+      const respostaDiv = document.getElementById("resposta");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const dados = Object.fromEntries(new FormData(form));
+
+        const res = await fetch("/enviar-pedido", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dados),
+        });
+
+        const json = await res.json();
+        respostaDiv.innerHTML = `<p>${json.mensagem || json.erro}</p>`;
+      });
+    </script>
+  </body>
+</html>
