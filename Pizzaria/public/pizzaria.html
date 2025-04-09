@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pizzaria Tanabraza</title>
+  </head>
+  <body>
+    <header class="barra-principal">
+      <nav aria-label="Menu principal">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#contatos">Contato</a></li>
+          <li><a href="#">Pedidos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="header-principal">
+        <div class="overlay"></div>
+        <div class="texto-cabecalho">
+          <h1>Pizzaria Tanabraza</h1>
+          <p>A pizzaria do bom gosto</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="sobrenos">
+        <h2 id="sobrenos">Sobre Nós</h2>
+        <p class="conteudo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          odio tempore veniam sit sint minus magnam consectetur nemo
+          repudiandae...
+        </p>
+        <div class="pizzas">
+          <img src="./imgs/pizza1.jpg" alt="Pizza saborosa 1" />
+          <img src="./imgs/pizza2.jpg" alt="Pizza saborosa 2" />
+          <img src="./imgs/pizza3.png" alt="Pizza saborosa 3" />
+        </div>
+      </section>
+
+      <section id="cardapio" aria-labelledby="titulo-cardapio">
+        <h2 id="titulo-cardapio">Cardápio</h2>
+        <table>
+          <caption>
+            Opções de sabores e tamanhos
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Imagem</th>
+              <th scope="col" rowspan="2">Sabor</th>
+              <th scope="col" rowspan="2">Descrição</th>
+              <th scope="col" colspan="3">Valor</th>
+            </tr>
+            <tr>
+              <th scope="col">P</th>
+              <th scope="col">M</th>
+              <th scope="col">G</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./imgs/calabresa.jpg" alt="Pizza de calabresa" />
+              </td>
+              <td>Calabresa</td>
+              <td>Azeitona, calabresa fatiada, cebola, mussarela, orégano</td>
+              <td>R$ 25,00</td>
+              <td>R$ 35,00</td>
+              <td>R$ 45,00</td>
+            </tr>
+            <tr>
+              <td>
+                <img
+                  src="./imgs/frango com cheddar.jpg"
+                  alt="Pizza de frango com cheddar"
+                />
+              </td>
+              <td>Frango com Cheddar</td>
+              <td>Azeitona, frango, cheddar, mussarela, orégano</td>
+              <td>R$ 25,00</td>
+              <td>R$ 35,00</td>
+              <td>R$ 45,00</td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./imgs/peperoni.jpeg" alt="Pizza de peperoni" />
+              </td>
+              <td>Peperoni</td>
+              <td>Pepperoni, azeitona, mussarela, orégano, cebola</td>
+              <td>R$ 30,00</td>
+              <td>R$ 40,00</td>
+              <td>R$ 50,00</td>
+            </tr>
+            <tr>
+              <td><img src="./imgs/coca.jpg" alt="Refrigerantes" /></td>
+              <td>Refrigerante</td>
+              <td>Coca-Cola, Pepsi, Sprite, Antártica, Kuat</td>
+              <td>R$ 10,00</td>
+              <td>R$ 15,99</td>
+              <td>R$ 21,00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="contatos" aria-labelledby="entre-em-contato">
+        <h2 id="entre-em-contato">Entre em contato conosco</h2>
+        <div class="todo-contato">
+          <div class="endereco">
+            <h3>Endereço</h3>
+            <p>Av Sei lá, 777</p>
+            <p>São Caetano</p>
+            <p>Salvador - BA</p>
+          </div>
+          <div class="horario">
+            <h3>Horários</h3>
+            <p>Quinta a Domingo: 18h às 00h</p>
+            <p>Terça e Quarta: 18h às 22h</p>
+            <p>Segunda: Não funcionamos</p>
+          </div>
+          <div class="telefone">
+            <h3>Telefone</h3>
+            <a href="tel:+5571977777777">(71) 97777-7777</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Feito por Ryan Vitor</p>
+    </footer>
+  </body>
+</html>

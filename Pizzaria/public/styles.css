@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #fff8f2;
+  color: #333;
+}
+
+/* NAVBAR */
+.barra-principal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+main {
+  padding-top: 5rem; /* Para evitar que o conteúdo fique embaixo da navbar */
+}
+
+.barra-principal nav {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.barra-principal ul {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.barra-principal a {
+  text-decoration: none;
+  color: #222;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.barra-principal a:hover {
+  color: #fc9400;
+}
+
+/* HEADER */
+.header-principal {
+  background: url("./imgs/pizza.PNG") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(56, 31, 31, 0.75);
+  z-index: 1;
+}
+
+.texto-cabecalho {
+  position: relative;
+  z-index: 2;
+}
+
+.texto-cabecalho h1 {
+  font-size: 4rem;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.texto-cabecalho p {
+  font-size: 1.6rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+/* SOBRE NÓS */
+#sobrenos {
+  padding: 3rem 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.conteudo {
+  text-align: center;
+  margin: 0 auto 3rem;
+  max-width: 80%;
+  font-size: 1.2rem;
+}
+
+.pizzas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.pizzas img {
+  border-radius: 10px;
+  width: 300px;
+  height: 260px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.pizzas img:hover {
+  transform: scale(1.05);
+}
+
+/* CARDÁPIO */
+#cardapio {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff3e0;
+  overflow-x: auto;
+}
+
+#cardapio tbody tr:hover {
+  background-color: #fff8e1;
+  transition: background-color 0.3s;
+}
+
+#cardapio table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table caption {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+thead {
+  background-color: #ffe0b2;
+}
+
+#cardapio img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTATOS */
+#entre-em-contato {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.todo-contato {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.todo-contato div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  background-color: #fff3e0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-contato h3 {
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 1rem;
+  color: #bf360c;
+}
+
+.todo-contato a,
+.todo-contato p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #bf360c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
