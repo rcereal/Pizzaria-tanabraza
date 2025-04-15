@@ -9,6 +9,7 @@ const db = require("./config/db");
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public")); // <- Adiciona isso aqui!
 
 // Conectar ao MySQL
 db.connect((err) => {
@@ -20,7 +21,7 @@ db.connect((err) => {
 });
 
 // Rotas
-app.use("/api/pizzas", pizzaRoutes); // Ex: /api/pizzas/criar
+app.use("/", pizzaRoutes); // <- Se você deixou sem o prefixo
 
 // Iniciar servidor
 app.listen(porta, () => {
